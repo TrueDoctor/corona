@@ -6,8 +6,9 @@ import math
 import datetime
 
 hitst_url = "https://covidapi.info/api/v1/country/" + sys.argv[1]
-TTD = 7
-inital_lethality = 0.016
+TTD = 12
+TTI = 10
+inital_lethality = 0.008
 
 #add  lethality in graph
 
@@ -27,8 +28,9 @@ for i in range(len(dates)):
             lethality = (fdeaths / cases)
             icases = cases / (inital_lethality / lethality)
             print(
-                f"{days[i]}; {cases}; {icases}; {deaths}; {rec}; {lethality}")
+                f"{days[i]}; {cases - rec}; {cases}; {icases}; {deaths}; {rec}; {lethality}"
+            )
         else:
-            print(f"{days[i]}; {cases}; ; {deaths}; {rec}; ")
+            print(f"{days[i]}; {cases - rec}; {cases}; ; {deaths}; {rec}; ")
     else:
-        print(f"{days[i]}; {cases}; ; {deaths}; {rec}; ")
+        print(f"{days[i]}; {cases - rec}; {cases}; ; {deaths}; {rec}; ")
