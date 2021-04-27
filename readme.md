@@ -3,8 +3,7 @@
 * Python 3
 
 ## Installation
-`git clone https://github.com/TrueDoctor/corona/edit/master/readme.md`
-
+`git clone https://github.com/TrueDoctor/corona/
 ## Executuion
 ```
 python 3 corona.py USA > data 
